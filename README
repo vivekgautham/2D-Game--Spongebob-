@@ -1,0 +1,22 @@
+Name: Vivekgautham Soundararaj
+Clemson Email Address: vsounda@clemson.edu
+
+Project no: 6
+Project due date: 12/4/2015 12:00 PM
+
+Project description: The game revolves around Sponge Bob and JellyFish and the enemy here is the Biter Fish. Biter Fish traps the sponge bob in a trap and Jelly Fish(player) will 
+have to kill the biterfish to explode the trap and free the spongebob. Both Jelly Fish and Biter Fish will have health or energy. They lose it when hit by enemy. When jellyfish health goes down to zero or the timer goes off , Jelly Fish exploded Game is over and player loses. On other hand If you kill Biter fish before the timer expires we win. When you hit the god Mode player is resilient to enemy's weapons  or the timer. Reset will reset everything including clock to the beginning and
+timer is also reset. After you win or lose corresponding message is displayed on the screen. 
+
+count Timer and critical Health is obtained from xml. when health goes down below critical , the health bar turns red. For biter fish if health goes down below critical, it degrades into a decaying biter fish and always tries to escape from the player as it could not fire any weapons. Once we kill this decaying biter fish, it explodes and the trap enclosed with the spongebob also explodes.
+The ai is designed in such a way the when the biter fish's health is above critical health , it always hangs around jelly fish trying to attack it.Also when the player fires , the enemy(Biter Fish) turns over and retaliates by firing back. 
+					 
+HUD displays necessary player movement details and clock info. Player movements include some interesting movements such as leap and speech bubble . Leap movements will be helpful while enemy is in attack Mode to deflect from it. HUD also keep track of In USE bullet list as well as free list. The bullets can also be fired using mouse left click.Per Pixel Collision Strategy is used for collision detection. When Player's weapons collide with biter fish or biter fish weapon collides with player, player or biter fish explodes. When player collides with spongebob player explodes and when it collides with small fishes, fishes explode. 
+						
+Painter's algorithm is achieved in the bubbles and fishes. Smaller fishes and bubbles are drawn at the back which moves at slower pace and the larger ones are drawn at the front  and moves faster. This illustrates depth. There are 4 layers drawn to show parallax scrolling.
+
+Some Sprites which includes Background Sprite, Fish Multi Sprite and Bubble Sprite are built using Inkscape and Gimp tool by myself. Other Sprites such as jellyfish, biterfish, and sponge bob are obtained from www.spriter-resource.com
+
+
+
+
