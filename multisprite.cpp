@@ -2,6 +2,8 @@
 #include "gamedata.h"
 #include "frameFactory.h"
 #include "explodingSprite.h"
+#include <cstdlib>
+#include <cmath>
 
 MultiSprite::~MultiSprite() {
 	if(explosion)
@@ -107,17 +109,17 @@ void MultiSprite::update(Uint32 ticks) {
   std::cout << getVelocity()[0] << getVelocity()[1] << std::endl;
   
   if ( Y() < 0) {
-    velocityY( abs( velocityY() ) );
+    velocityY( std::abs( velocityY() ) );
   }
   if ( Y() > worldHeight-frameHeight) {
-    velocityY( -abs( velocityY() ) );
+    velocityY( -std::abs( velocityY() ) );
   }
 
   if ( X() < 0) {
-    velocityX( abs( velocityX() ) );
+    velocityX( std::abs( velocityX() ) );
   }
   if ( X() > worldWidth-frameWidth) {
-    velocityX( -abs( velocityX() ) );
+    velocityX( -std::abs( velocityX() ) );
 //    advanceFrame();
   }
 }

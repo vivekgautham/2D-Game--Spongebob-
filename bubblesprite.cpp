@@ -1,4 +1,6 @@
 #include "bubblesprite.h"
+#include <cstdlib>
+#include <cmath>
 
 BubbleSprite::BubbleSprite( const std::string& name) : ScaleSprite(name) {
 	distributeStartLocation();
@@ -22,7 +24,7 @@ void BubbleSprite::update(Uint32 ticks) {
   setPosition(randPos);
   }
   if ( Y() > worldHeight-frameHeight) {
-    velocityY( -abs( velocityY() ) );
+    velocityY( -std::abs( velocityY() ) );
   }
 
 }

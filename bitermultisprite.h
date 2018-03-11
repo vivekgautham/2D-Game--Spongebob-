@@ -2,6 +2,7 @@
 #define BITERMULTISPRITE__H
 #include <string>
 #include <vector>
+#include <cmath>
 #include "drawable.h"
 #include "sprite.h"
 #include "multisprite.h"

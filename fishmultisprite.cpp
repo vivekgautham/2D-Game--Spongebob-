@@ -1,5 +1,7 @@
 #include "fishmultisprite.h"
 #include "explodingSprite.h"
+#include <cstdlib>
+#include <cmath>
 
 FishMultiSprite::FishMultiSprite( const std::string& name) : ScaleMultiSprite(name) {
 	distributeStartLocation();
@@ -39,17 +41,17 @@ void FishMultiSprite::update(Uint32 ticks) {
   setPosition(getPosition() + incr);
   advanceFrame();
   if ( Y() < 0) {
-    velocityY( abs( velocityY() ) );
+    velocityY( std::abs( velocityY() ) );
   }
   if ( Y() > worldHeight-frameHeight) {
-    velocityY( -abs( velocityY() ) );
+    velocityY( -std::abs( velocityY() ) );
   }
 
   if ( X() < 0) {
-    velocityX( abs( velocityX() ) );
+    velocityX( std::abs( velocityX() ) );
   }
   if ( X() > worldWidth-frameWidth) {
-    velocityX( -abs( velocityX() ) );
+    velocityX( -std::abs( velocityX() ) );
   }
 }
 
